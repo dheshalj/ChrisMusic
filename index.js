@@ -2,7 +2,7 @@ const path = require('path')
 const express = require('express')
 const useragent = require('express-useragent');
 const cors = require('cors')
-const { CM, CMS } = require('./ChrisMusic')
+const { CM, CMS } = require('./chrisMusic')
 const app = express()
 
 app.use(cors())
