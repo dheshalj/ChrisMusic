@@ -1,0 +1,123 @@
+body { 
+  color: rgba(0,0,0,0.87);
+  font-family: Roboto, Helvetica, Arial, sans-serif;
+  margin: 0;
+  padding: 0;
+}
+
+.txt1 {
+  color: #86298c;
+  padding-top: 5px;
+  padding-bottom: 18.17px;
+  font-weight: bold;
+  margin: 0 0 8px;
+  font-family: Roboto, Helvetica, Arial, sans-serif;
+  font-size: xxx-large;
+}
+
+.txt2 {
+  padding-bottom: 18.17px;
+  color: #888;
+  font-weight: normal;
+  margin: 0 0 8px;
+  font-family: Roboto, Helvetica, Arial, sans-serif;
+  font-size: xxx-large;
+}
+
+.title {
+  text-align: center; padding-top: 40px;
+}
+
+#searchContainer {
+  padding-left: 80px;
+  padding-top: 40px;
+  padding-right: 100px;
+}
+
+#searchBox {
+  padding-right: 20px; padding-left: 20px; border-radius: 100px; background-color: #f3f3f3; border: transparent; outline: none;
+}
+
+.paramContainer {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+}
+
+#videosContainer {
+  padding-top: 20px;
+  width: 100%;
+  justify-content: center;
+  padding-left: 80px;
+  padding-right: 80px;
+}
+
+.custom_checkbox[type="checkbox"]:checked + span:not(.lever)::before {
+  border: 2px solid transparent;
+  border-bottom: 2px solid #86298c;
+  border-right: 2px solid #86298c;
+  background: transparent;
+}
+
+.card-reveal {
+  display: none;
+  transform: translateY(0%);
+}
+
+.musicTitle {
+  font-size: large !important;
+}
+
+.musicLength {
+  color: white !important;
+  right: 0 !important;
+  padding: 8px !important;
+  font-size: large !important;
+  font-family: system-ui;
+}
+
+.cProgress {
+  margin: 0 !important;
+  background-color: #ccaecb !important;
+}
+
+.cProgress .cIndeterminate {
+  background-color: #86298c !important;
+}
+
+.c2Progress {
+  margin-bottom: 1rem !important;
+  margin-left: 11px;
+  background-color: #ccaecb !important;
+}
+
+.c2Progress .c2Indeterminate {
+  background-color: #86298c !important;
+}
+
+i.iconColor {
+  /* color: #04cbfc; */
+  color: #000000;
+}
+
+.tintBackground {
+  background-color: #00000054;
+  border-radius: 5px;
+  padding: 5px;
+}
+
+::-webkit-scrollbar {
+  height: 4px;
+  width: 4px;
+  background: white;
+}
+
+::-webkit-scrollbar-thumb:horizontal {
+  background: gray;
+  border-radius: 10px;
+}
+
+::-webkit-scrollbar-thumb:vertical {
+  background: gray;
+  border-radius: 20px;
+}

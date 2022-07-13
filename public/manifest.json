@@ -1,0 +1,28 @@
+{
+  "short_name": "ChrisMusic",
+  "name": "Chris Music",
+  "icons": [
+    {
+      "src": "/img/ChrisMusicLogo.svg",
+      "type": "image/svg+xml",
+      "sizes": "149x150"
+    },
+    {
+      "src": "/img/ChrisMusicLogo192.png",
+      "type": "image/png",
+      "sizes": "192x192"
+    },
+    {
+      "src": "/img/ChrisMusicLogo512.png",
+      "type": "image/png",
+      "sizes": "512x512"
+    }
+  ],
+  "scope": "/",
+  "start_url": "https://chrismusic.dheshal.com/",
+  "background_color": "#FFFFFF",
+  "display": "standalone",
+  "orientation": "any",
+  "theme_color": "#86298c",
+  "description": "A Music Downloader for Chrismarie"
+}

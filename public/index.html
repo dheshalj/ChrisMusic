@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8" />
+	<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+	<meta name="theme-color" media="(prefers-color-scheme: light)" content="white">
+	<meta name="theme-color" media="(prefers-color-scheme: dark)" content="black">
+	<link rel="manifest" href="/manifest.json">
+	<link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+	<link rel="stylesheet" href="css/materialize.css">
+	<title>Chris Music</title>
+	<link rel="shortcut icon" href="img/favicon.png" type="image/x-icon" />
+	<link rel="stylesheet" href="css/main.css" />
+</head>
+<body onload="rsz()" onresize="rsz()">
+	<div class="title">
+		<h4><span class="txt1">Chris</span>&nbsp;<span class="txt2">Music</span></h4></div>
+    <div id="searchContainer">
+      <div class="input-field">
+        <input type="search" name="q" id="searchBox" placeholder="Search Music.." title="Search Music" onkeyup="search(event, this)">
+        <label class="label-icon" for="searchBox"></label>
+      </div>
+      <div id="searchLoaderHolder"></div>
+    </div>
+    <div class="container paramContainer">
+      <label>
+        <input id="isSI" class="custom_checkbox" type="checkbox"/>
+        <span>Show Image</span>
+      </label>  
+    </div>
+    <div class="container" id="videosContainer"><div class="row" id="videoContainer"></div></div>
+    <script src="js/materialize.min.js"></script>
+    <script src="js/script.js"></script>
+  </body>
+</html>
