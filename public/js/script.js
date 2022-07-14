@@ -45,19 +45,9 @@ class HTTP {
   }
 }
 
-function startDownload(ele, url) {
-  const downloadProgress = new ProgressBar(ele.querySelector('div#musicLoaderHolder'), ['cProgress'], ['cIndeterminate'])
+function startDownload(url) {
   M.toast({ html: `Downloading...`, classes: 'rounded' });
-  downloadProgress.start()
-  HTTP.get(url, (res) => {
-    if (res != 'error') {
-      downloadProgress.stop()
-      window.location.href = res;
-    } else {
-      downloadProgress.stop()
-      M.toast({ html: `Error! Try again`, classes: 'rounded' });
-    }
-  });
+  window.location.href = url;
 }
 
 function returnIsSI(ShowImage, thumbnail, timestamp) {
@@ -99,7 +89,7 @@ function parseResult(video, ShowImage) {
           <a href="javascript:void(0);" onclick="window.location.href = '${video.url}'">
             <i class="material-icons iconColor">play_circle_filled</i>
           </a>
-          <a href="javascript:void(0);" onclick="startDownload(this.parentElement.parentElement, 'https://jilm59ip3a.execute-api.ap-southeast-1.amazonaws.com/dev/download?v=${video.videoId}')">
+          <a href="javascript:void(0);" onclick="startDownload('https://jilm59ip3a.execute-api.ap-southeast-1.amazonaws.com/dev/download?v=${video.videoId}')">
             <i class="material-icons iconColor">file_download</i>
           </a>
       </div>
