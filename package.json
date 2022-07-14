@@ -12,7 +12,6 @@
     "axios": "^0.24.0",
     "cors": "^2.8.5",
     "express": "^4.17.1",
-    "express-useragent": "^1.0.15",
     "form-data": "^4.0.0",
     "get-video-id": "^3.4.3",
     "yt-search": "^2.10.2"

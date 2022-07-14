@@ -69,7 +69,7 @@ function search(e, ele) {
     const searchProgress = new ProgressBar((ele.parentElement.parentElement).querySelector('div#searchLoaderHolder'), ['c2Progress'], ['c2Indeterminate'])
     searchProgress.start()
     document.getElementById('videoContainer').innerHTML = ``
-    HTTP.get('/search?q=' + ele.value, (res) => {
+    HTTP.get('https://jilm59ip3a.execute-api.ap-southeast-1.amazonaws.com/dev/search?q=' + ele.value, (res) => {
       const ShowImage = document.getElementById('isSI').checked
       if (JSON.parse(res).videos) {
         JSON.parse(res).videos.forEach(video => {
@@ -99,7 +99,7 @@ function parseResult(video, ShowImage) {
           <a href="javascript:void(0);" onclick="window.location.href = '${video.url}'">
             <i class="material-icons iconColor">play_circle_filled</i>
           </a>
-          <a href="javascript:void(0);" onclick="startDownload(this.parentElement.parentElement, '/download?v=${video.videoId}')">
+          <a href="javascript:void(0);" onclick="startDownload(this.parentElement.parentElement, 'https://jilm59ip3a.execute-api.ap-southeast-1.amazonaws.com/dev/download?v=${video.videoId}')">
             <i class="material-icons iconColor">file_download</i>
           </a>
       </div>
