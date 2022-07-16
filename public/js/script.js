@@ -45,9 +45,10 @@ class HTTP {
   }
 }
 
-function startDownload(url) {
+function startDownload(id) {
   M.toast({ html: `Downloading...`, classes: 'rounded' });
-  window.location.href = url;
+  HTTP.get('/log/download?v=' + id, () => {})
+  window.location.href = `https://jilm59ip3a.execute-api.ap-southeast-1.amazonaws.com/dev/download?v=${id}`;
 }
 
 function returnIsSI(ShowImage, thumbnail, timestamp) {
@@ -59,6 +60,7 @@ function search(e, ele) {
     const searchProgress = new ProgressBar((ele.parentElement.parentElement).querySelector('div#searchLoaderHolder'), ['c2Progress'], ['c2Indeterminate'])
     searchProgress.start()
     document.getElementById('videoContainer').innerHTML = ``
+    HTTP.get('/log/search?q=' + ele.value, () => {})
     HTTP.get('https://jilm59ip3a.execute-api.ap-southeast-1.amazonaws.com/dev/search?q=' + ele.value, (res) => {
       const ShowImage = document.getElementById('isSI').checked
       if (JSON.parse(res).videos) {
@@ -89,7 +91,7 @@ function parseResult(video, ShowImage) {
           <a href="javascript:void(0);" onclick="window.location.href = '${video.url}'">
             <i class="material-icons iconColor">play_circle_filled</i>
           </a>
-          <a href="javascript:void(0);" onclick="startDownload('https://jilm59ip3a.execute-api.ap-southeast-1.amazonaws.com/dev/download?v=${video.videoId}')">
+          <a href="javascript:void(0);" onclick="startDownload('${video.videoId}')">
             <i class="material-icons iconColor">file_download</i>
           </a>
       </div>
