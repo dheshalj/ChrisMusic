@@ -4,7 +4,7 @@ const express = require('express')
 const cors = require('cors')
 const app = express()
 
-fs.writeFile(resolve(__dirname, 'bucket', 'req.log'), '', { flag: 'wx' }, () => {});
+fs.writeFile(path.resolve(__dirname, 'bucket', 'req.log'), '', { flag: 'wx' }, () => {});
 const log = require('simple-node-logger').createSimpleLogger({
   logFilePath: 'bucket/req.log',
   timestampFormat: 'YYYY-MM-DD HH:mm:ss.SSS',
